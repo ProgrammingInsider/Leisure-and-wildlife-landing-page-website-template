@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;600;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    z-index: 5;
+    text-decoration: none;
+}
+
+ body{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+
+.heroPage{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./img/bg.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 80px;
+    z-index: 100;
+}
+
+.black,.red{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.black{
+    padding-left: 1em;
+    background-color: rgba(0, 0, 0, .8);
+    justify-content: space-between;
+}
+
+.red{
+    background: linear-gradient(
+        to right,
+        rgba(183, 1, 10,.6),
+        rgba(183, 1, 10,.6),
+        rgba(0, 0, 0, .7));
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1em;
+}
+
+.logo{
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.logoName{
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    font-size: .9rem;
+}
+
+.slogan{
+    color: lightgray;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    font-size: .7rem;
+}
+
+.nav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(183, 1, 10,.8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 0;
+    overflow: hidden;   
+    transition: all .7s ease-in-out;
+}
+
+.showNav{
+    height: auto;
+    padding: 1em;
+}
+
+.nav li{
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: .5em;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.nav li:hover{
+    transform: translateX(10px);
+}
+
+.icon{
+    width: 18px;
+    height: 18px;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.icon img{
+    width: 100%;
+}
+#barContainer{
+    font-size: 1.2rem;
+    color: #fff;
+    display: flex;
+}
+
+@media screen and (min-width:750px) {
+    header{
+        grid-template-columns: 1fr 1fr;
+    }
+    .nav{
+        position: relative;
+        height: auto;
+        flex-direction: row;
+        top: 0;
+        background-color: transparent;
+    }  
+    
+    .nav li{
+        margin-right: 1em;
+    }
+
+    .nav li:hover{
+        transform: translateX(3px);
+    }
+
+    #bar{
+        display: none;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .slogan{
+        letter-spacing: 1em;
+    }
+}
+
+/* Hero Desc */
+.heroDescContainer{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 95%;
+    margin: auto;
+    margin-top: 1.5em;
+}
+
+.heroDesc{
+    max-width: 450px;
+}
+
+.headline{
+    font-size: 4.2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.1em;
+    margin-bottom: .1em;
+}
+
+.sub-headline{
+    font-size: .9rem;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.heroFooter{
+    display: grid;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    margin-top: 2em; 
+}
+
+.order{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(255, 255, 255,.7);
+    padding: 2em;
+    border-radius: 20px;
+    max-width: 450px;
+}
+
+.formTitle{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: .5em;
+}
+
+.orderInput{
+    border: none;
+    outline: none;
+    font-size: .9rem;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.orderInput::placeholder{
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.btn{
+    background-color: #b7010a;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1em;
+    cursor: pointer;
+    /* width: 90%; */
+}
+
+/* About Us */
+.aboutus{
+    margin-top: 2rem;
+}
+
+.aboutus h1{
+    font-size: 1.5rem;
+    margin-bottom: .5em;
+}
+
+.pagination{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 7fr 1fr 1fr;
+    margin-top: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress{
+    background-color: #fff;
+    width: 100%;
+    height: 1px;
+}
+
+.pagBtn{
+    width: 10px;
+    cursor: pointer;
+}
+
+.pages{
+    letter-spacing: .5em;
+}
+
+.activePage{
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width:800px){
+    .headline{
+        font-size: 4.6rem;
+    }
+    .heroFooter{
+        grid-template-columns: 2fr 1fr;
+        margin-top: 1em; 
+    }
+    .aboutus{
+        margin-top: 0rem;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    .order{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 700px;
+        gap: 5px;
+    }
+}
+
+.socialLinks{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .7em;
+    background-color: #000000;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 1000;
+}
+.socialLinks a{
+    width: 22px; 
+    overflow: hidden;
+}
+.socialLinks a img{
+    width: 100%;
+    margin-bottom: .5em;
+    object-fit: cover;
+    cursor: pointer;
+}
